@@ -39,4 +39,4 @@ Make sure to include these dependencies in your project if you decide to modify 
 If you have suggestions or find issues with the template, feel free to open an issue or create a pull request. Contributions are welcome!
 
 ## Contact
-If you have any questions, feedback, or suggestions, please feel free to reach out to us at [basmasalim030@gmai.com](mailto:basmasalim030@gmail.com). We value your input and would love to hear from you!
+If you have any questions, feedback, or suggestions, please feel free to reach out to us at [basmasalim030@gmail.com](mailto:basmasalim030@gmail.com). We value your input and would love to hear from you!
