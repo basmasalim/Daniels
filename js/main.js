@@ -2,7 +2,7 @@
 let navRef = document.querySelector('nav');
 
 document.addEventListener('scroll', () => {
-  if (window.scrollY > 650) {
+  if (window.scrollY > 690) {
     navRef.classList.add('scrolled');
   } else {
     navRef.classList.remove('scrolled');
@@ -66,8 +66,10 @@ function startCount(el) {
     if (el.textContent == goal) {
       clearInterval(count);
     }
-  }, 3000 / goal);
+  }, 10000 / goal);
 }
 
 
 
+//wow.js
+new WOW().init();
