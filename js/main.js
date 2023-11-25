@@ -1,3 +1,15 @@
+// change color Navbar
+let navRef = document.querySelector('nav');
+
+document.addEventListener('scroll', () => {
+  if (window.scrollY > 650) {
+    navRef.classList.add('scrolled');
+  } else {
+    navRef.classList.remove('scrolled');
+  }
+}, { passive: true })
+
+
 //spinner-wrapper
 const spinnerWrapperEL = document.querySelector('.spinner-wrapper');
 
@@ -9,20 +21,6 @@ setTimeout(() => {
   spinnerWrapperEL.style.display = 'none';
 }, 2500);
 
-const scrollSpy = new bootstrap.ScrollSpy(document.body, {
-  target: '#navbar-example'
-})
-
-// change color Navbar
-document.addEventListener('scroll', () => {
-  var nav  =document.querySelector('nav');
-  if (window.scrollY > 780){
-      nav.classList.add("scrolled");
-  }
-  else{
-      nav.classList.remove("scrolled"); 
-  }
-})
 
   // type js
 $(document).ready(function () {
@@ -68,7 +66,7 @@ function startCount(el) {
     if (el.textContent == goal) {
       clearInterval(count);
     }
-  }, 2500 / goal);
+  }, 3000 / goal);
 }
 
 

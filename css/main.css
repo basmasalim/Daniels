@@ -62,7 +62,6 @@ body {
   font-family: var(--font-default);
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
 }
 img {
   display: block;
@@ -96,28 +95,6 @@ a {
 .navbar > .container-xxl {
   padding-inline: 6.5%;
   padding-top: 1%;
-}
-.title {
-  position: relative;
-}
-.title h2 {
-  position: relative;
-  color: var(--title-color);
-  font-family: var(--Montserrat-font);
-  font-size: 2.4rem !important;
-  font-weight: 900 !important;
-  z-index: 1;
-}
-.title h2::after {
-  content: "";
-  position: absolute;
-  width: 30%;
-  height: 50%;
-  left: 35%;
-  top: 55%;
-  background-image: url(../images/dots.png);
-  background-repeat: repeat;
-  z-index: -1;
 }
 /*-------------------------------  End Global Rules ------------------------------- */
 /*-------------------------------  Start spinner ------------------------------- */
@@ -155,22 +132,6 @@ nav ul {
 .navbar-toggler:focus {
   box-shadow: 0 0 0 transparent;
 }
-/* .navbar-nav .nav-link.active {
-  position: relative;
-}
-.navbar-nav .nav-link.active.active::after {
-  content: "";
-  position: absolute;
-  width: 75%;
-  height: 2.5px;
-  left: 10%;
-  bottom: 2px;
-  background-color: var(--white-color);
-  transition: all 0.6s;
-}
-nav.scrolled .navbar-nav .nav-link.active.active::after{
-  background-color: var(--dark-color);
-} */
 nav button span  {
   color: var(--white-color) ;
   font-size: 22px;
@@ -191,7 +152,20 @@ nav button span  {
  nav.scrolled a {
   color: var(--dark-color) !important;
 }
- nav.scrolled .nav-item .active::before {
+.navbar-nav .nav-link.active {
+  position: relative;
+}
+.navbar-nav .nav-link.active.active::after {
+  content: "";
+  position: absolute;
+  width: 75%;
+  height: 2.5px;
+  left: 10%;
+  bottom: 2px;
+  background-color: #fff;
+  transition: all 0.6s;
+}
+nav.scrolled .navbar-nav .nav-link.active.active::after {
   background-color: var(--dark-color);
 }
 /*-------------------------------  End Navbar  ------------------------------- */
@@ -289,6 +263,25 @@ nav button span  {
 #services {
   background-color: var(--bg-color);
 }
+#services .title h2 {
+  position: relative;
+  color: var(--title-color);
+  font-family: var(--Montserrat-font);
+  font-size: 2.4rem !important;
+  font-weight: 900 !important;
+  z-index: 1;
+}
+#services .title h2::after {
+  content: "";
+  position: absolute;
+  width: 17%;
+  height: 50%;
+  left: 41.5%;
+  top: 55%;
+  background-image: url(../images/dots.png);
+  background-repeat: repeat;
+  z-index: -1;
+}
 #services .item {
   display: flex;
   justify-content: center;
@@ -321,6 +314,25 @@ nav button span  {
 /*-------------------------------  start work  ------------------------------- */
 #works {
   text-align: center;
+}
+#works .title h2 {
+  position: relative;
+  color: var(--title-color);
+  font-family: var(--Montserrat-font);
+  font-size: 2.4rem !important;
+  font-weight: 900 !important;
+  z-index: 1;
+}
+#works .title h2::after {
+  content: "";
+  position: absolute;
+  width: 17%;
+  height: 50%;
+  left: 41.5%;
+  top: 55%;
+  background-image: url(../images/dots.png);
+  background-repeat: repeat;
+  z-index: -1;
 }
 #works .nav {
   --bs-nav-link-color: 0%;
@@ -395,12 +407,35 @@ nav button span  {
   opacity: 1;
   transform: translateY(0%);
 }
+.lightboxOverlay{
+  z-index: 3 !important;
+  width: 100% !important;
+}
 /*-------------------------------  End work  ------------------------------- */
 /*-------------------------------- Start testimonials ------------------------------------*/
 #testimonials {
   background-color: var(--bg-color);
   color: var(--paragraph-color);
   height: 500px;
+}
+#testimonials .title h2 {
+  position: relative;
+  color: var(--title-color);
+  font-family: var(--Montserrat-font);
+  font-size: 2.4rem !important;
+  font-weight: 900 !important;
+  z-index: 1;
+}
+#testimonials .title h2::after {
+  content: "";
+  position: absolute;
+  width: 24%;
+  height: 50%;
+  left: 38.5%;
+  top: 55%;
+  background-image: url(../images/dots.png);
+  background-repeat: repeat;
+  z-index: -1;
 }
 #testimonials .owl-carousel .item .item-layer {
   height: 300px;
@@ -479,6 +514,25 @@ nav button span  {
 #team {
   background-color: var(--bg-color);
 }
+#team .title h2 {
+  position: relative;
+  color: var(--title-color);
+  font-family: var(--Montserrat-font);
+  font-size: 2.4rem !important;
+  font-weight: 900 !important;
+  z-index: 1;
+}
+#team .title h2::after {
+  content: "";
+  position: absolute;
+  width: 18%;
+  height: 50%;
+  left: 41%;
+  top: 55%;
+  background-image: url(../images/dots.png);
+  background-repeat: repeat;
+  z-index: -1;
+}
 #team .card {
   --bs-card-border-color: 0%;
   border-top-right-radius: 0%;
@@ -552,6 +606,25 @@ nav button span  {
 }
 /*-------------------------------- End team ------------------------------------*/
 /*-------------------------------- Start contact ------------------------------------*/
+#contact .title h2 {
+  position: relative;
+  color: var(--title-color);
+  font-family: var(--Montserrat-font);
+  font-size: 2.4rem !important;
+  font-weight: 900 !important;
+  z-index: 1;
+}
+#contact .title h2::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 50%;
+  left: 40%;
+  top: 55%;
+  background-image: url(../images/dots.png);
+  background-repeat: repeat;
+  z-index: -1;
+}
 #contact .contact-item .contact-icon {
   width: 60px;
   height: 60px;
@@ -708,6 +781,14 @@ footer p {
   #contact .row > * {
     margin-block: 5px;
   }
+  .lightboxOverlay{
+    z-index: 3 !important;
+    width: 100% !important;
+  }
+  body{
+    overflow-x: hidden; 
+
+}
 }
 @media (max-width: 576px) {
   #testimonials .owl-carousel .item .item-image {
@@ -730,6 +811,14 @@ footer p {
   }
   #works .nav-tabs .nav-link{
     font-size: 0.7rem;
+  }
+  body{
+       overflow-x: hidden; 
+
+  }
+  .lightboxOverlay{
+    z-index: 3 !important;
+    width: 100% !important;
   }
 }
 @media (max-width: 330px) {
