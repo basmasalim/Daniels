@@ -1,0 +1,740 @@
+/*-------------------------------  Start Variables ------------------------------- */
+:root {
+  --main-color: #1c1c1c;
+  --dark-color: #000;
+  --white-color: #fff;
+  --bg-color: #f7f7f7;
+  --layer-color: #fdfdfe;
+  --paragraph-color: rgba(0, 0, 0, 0.5);
+  --footer-color: #748182;
+  --team-color: #5b5b5b;
+  --contact-color: #1d1d1d;
+  --title-color: #343434;
+
+  --Montserrat-font: "Montserrat", sans-serif;
+  --Poppins-font: "Poppins", sans-serif;
+
+  --main-padding: 9%;
+}
+/*-------------------------------  End Variables ------------------------------- */
+/*----------------------------------- Start Customize Scrollbar ----------------------*/
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar {
+  height: 100px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #eeeeee8c;
+  box-shadow: inset 0 0 5px rgb(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 100px;
+  box-shadow: inset 0 0 10px #eeeeeeaf;
+}
+/*----------------------------------- End Customize Scrollbar ----------------------*/
+/*----------------------------------- Start Selection ----------------------*/
+::selection {
+  background-color: var(--title-color);
+  color: var(--white-color);
+}
+/*----------------------------------- End Selection ----------------------*/
+/*-------------------------------  Start Global Rules ------------------------------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 40px;
+}
+*,
+*::after,
+*::before {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  font-family: var(--font-default);
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+img {
+  display: block;
+  width: 100%;
+}
+a {
+  color: inherit;
+}
+.Poppins-font {
+  font-family: "Poppins", sans-serif;
+}
+.Montserrat-font {
+  font-family: "Montserrat", sans-serif;
+}
+.about-color {
+  color: #1c1c1c;
+}
+.title-color {
+  color: #343434;
+}
+.main-padding {
+  padding-inline: 6.5%;
+  padding-block: 5%;
+}
+.navbar > .container,
+.navbar > .container-fluid,
+.navbar > .container-lg,
+.navbar > .container-md,
+.navbar > .container-sm,
+.navbar > .container-xl,
+.navbar > .container-xxl {
+  padding-inline: 6.5%;
+  padding-top: 1%;
+}
+.title {
+  position: relative;
+}
+.title h2 {
+  position: relative;
+  color: var(--title-color);
+  font-family: var(--Montserrat-font);
+  font-size: 2.4rem !important;
+  font-weight: 900 !important;
+  z-index: 1;
+}
+.title h2::after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 50%;
+  left: 35%;
+  top: 55%;
+  background-image: url(../images/dots.png);
+  background-repeat: repeat;
+  z-index: -1;
+}
+/*-------------------------------  End Global Rules ------------------------------- */
+/*-------------------------------  Start spinner ------------------------------- */
+.spinner-wrapper {
+  background-color: var(--white-color);
+  color: var(--title-color);
+  font-size: 2.2rem;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1.5s;
+}
+.spinner-border {
+  height: 50px;
+  width: 50px;
+}
+/*-------------------------------  end spinner ------------------------------- */
+/*-------------------------------  Start Navbar ------------------------------- */
+nav .navbar-brand {
+  font-family: var(--Montserrat-font);
+  font-weight: 900 !important;
+  font-size: 1.1rem !important;
+}
+nav ul {
+  font-family: var(--Poppins-font);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 transparent;
+}
+/* .navbar-nav .nav-link.active {
+  position: relative;
+}
+.navbar-nav .nav-link.active.active::after {
+  content: "";
+  position: absolute;
+  width: 75%;
+  height: 2.5px;
+  left: 10%;
+  bottom: 2px;
+  background-color: var(--white-color);
+  transition: all 0.6s;
+}
+nav.scrolled .navbar-nav .nav-link.active.active::after{
+  background-color: var(--dark-color);
+} */
+nav button span  {
+  color: var(--white-color) ;
+  font-size: 22px;
+}
+ nav.scrolled {
+  background-color: var(--white-color);
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 0 10px rgb(179, 175, 175);
+}
+
+ nav.scrolled button span i {
+  color: var(--dark-color);
+  font-size: 20px;
+}
+
+ nav.scrolled a {
+  color: var(--dark-color) !important;
+}
+ nav.scrolled .nav-item .active::before {
+  background-color: var(--dark-color);
+}
+/*-------------------------------  End Navbar  ------------------------------- */
+/*-------------------------------  Start Header  ------------------------------- */
+#home {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url(../images/bg.jpg);
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  font-family: var(--Montserrat-font);
+}
+#home h1 {
+  font-size: 2.8rem;
+}
+#home p {
+  font-weight: 200 !important;
+  font-size: 3.2rem;
+}
+#typed {
+  font-size: 3.2rem;
+}
+.typed-cursor {
+  font-size: 3.2rem;
+}
+#home .home-icon ul li {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 50%;
+  background-color: transparent;
+}
+/*-------------------------------  End Header  ------------------------------- */
+/*-------------------------------  Start About  ------------------------------- */
+#about .left::after {
+  content: "";
+  position: absolute;
+  background-image: url(../images/dots.png);
+  width: 80%;
+  height: 80%;
+  left: -8%;
+  top: 25%;
+  z-index: -1;
+}
+#about .right h3,
+#about .right p {
+  color: var(--paragraph-color);
+}
+#about .progressing h6 {
+  font-size: 0.84rem;
+}
+#about .progressing span {
+  right: 8%;
+  font-size: 0.75rem;
+}
+#about .progressing .Branding {
+  right: 23%;
+}
+#about .progressing .Development {
+  right: 13%;
+}
+#about .button {
+  font-size: 0.8rem;
+}
+#about .button .btn1 {
+  background-color: var(--main-color);
+  color: var(--white-color);
+  border: var(--main-color) 1px solid;
+  transition: all 0.5s;
+}
+#about .button .btn1:hover {
+  background-color: var(--white-color);
+  color: var(--dark-color);
+  border: var(--dark-color) 1px solid;
+}
+#about .button .btn2 {
+  transition: all 0.5s;
+}
+#about .button .btn2:hover {
+  background-color: var(--main-color);
+  color: var(--white-color);
+  border: var(--main-color) 1px solid;
+}
+/*-------------------------------  End About  ------------------------------- */
+/*-------------------------------  Start services  ------------------------------- */
+#services {
+  background-color: var(--bg-color);
+}
+#services .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#services .item .icon {
+  transition: all 0.5s;
+}
+#services .item .icon {
+  width: 80px;
+  height: 80px;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  text-align: center;
+}
+#services .item:hover .icon {
+  background-color: var(--title-color);
+}
+#services .item:hover .icon {
+  color: var(--white-color);
+}
+#services p {
+  font-size: 0.9rem;
+}
+/*-------------------------------  End services  ------------------------------- */
+/*-------------------------------  start work  ------------------------------- */
+#works {
+  text-align: center;
+}
+#works .nav {
+  --bs-nav-link-color: 0%;
+}
+#works .nav-tabs {
+  --bs-nav-tabs-border-width: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#works .nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  position: relative;
+}
+#works .nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 2.5px;
+  left: 21%;
+  bottom: 5px;
+  background-color: var(--title-color);
+}
+#works .nav-tabs .nav-link {
+  color: var(--title-color) !important;
+  font-weight: bold;
+}
+#works .tab-content h6 {
+  font-size: 0.8rem !important;
+}
+#works .tab-content .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-right: 30px;
+}
+#works .tab-content .work-icon {
+  font-size: 0.8rem !important;
+  color: var(--white-color);
+  width: 25px;
+  height: 25px;
+  background-color: var(--title-color);
+  border: 1px var(--title-color) solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.5s;
+  margin-left: 3px;
+}
+#works .tab-content .work-icon:hover {
+  background-color: var(--white-color);
+  color: var(--title-color);
+}
+#works .tab-content .item .layer {
+  width: 95%;
+  height: 95%;
+  top: 2.5%;
+  left: 2.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: all 0.5s;
+  transform: translateY(10px);
+  background-color: var(--white-color);
+}
+#works .tab-content .item:hover .layer {
+  opacity: 1;
+  transform: translateY(0%);
+}
+/*-------------------------------  End work  ------------------------------- */
+/*-------------------------------- Start testimonials ------------------------------------*/
+#testimonials {
+  background-color: var(--bg-color);
+  color: var(--paragraph-color);
+  height: 500px;
+}
+#testimonials .owl-carousel .item .item-layer {
+  height: 300px;
+  text-align: center;
+  margin-top: 50px;
+  position: relative;
+}
+#testimonials .owl-carousel .item .item-image {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 50%; /* Center the element */
+  transform: translateX(-50%); /* Center the element */
+}
+#testimonials .owl-carousel .item .item-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+#testimonials .owl-carousel .item .item-layer .content-test {
+  position: absolute;
+  bottom: 50px;
+  left: 50%; /* Adjusted left value for centering */
+  transform: translateX(-50%); /* Center the element */
+  width: 90%;
+}
+#testimonials .owl-carousel h6 {
+  font-weight: 600;
+  font-size: 15px;
+}
+#testimonials .owl-carousel span {
+  text-align: center;
+  font-weight: 800;
+  font-size: 11px;
+}
+
+#testimonials .owl-carousel .description {
+  margin-block: 30px;
+  font-weight: 400;
+}
+
+#testimonials .owl-dots {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  bottom: 11%;
+  text-align: center;
+}
+#testimonials .owl-carousel .owl-dots.disabled,
+.owl-carousel .owl-nav.disabled {
+  display: block;
+}
+#testimonials .owl-carousel button.owl-dot {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  margin-top: -100px;
+  border-radius: 50%;
+  background-color: var(--title-color);
+  opacity: 0.4;
+  transition: 300ms;
+  margin-inline: 5px;
+}
+#testimonials .owl-carousel button.owl-dot.active {
+  opacity: 0.7;
+}
+/*-------------------------------- End testimonials ------------------------------------*/
+/*-------------------------------- start count ------------------------------------*/
+.count .num {
+  font-size: 2rem;
+  font-weight: 800;
+}
+/*-------------------------------- End count ------------------------------------*/
+/*-------------------------------- Start team ------------------------------------*/
+#team {
+  background-color: var(--bg-color);
+}
+#team .card {
+  --bs-card-border-color: 0%;
+  border-top-right-radius: 0%;
+  border-top-left-radius: 0%;
+}
+#team .card-img,
+#team .card-img-top {
+  border-top-right-radius: 0%;
+  border-top-left-radius: 0%;
+}
+#team .card-body {
+  background-color: var(--team-color);
+  color: var(--white-color);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+#team .card-body h3 {
+  font-size: 1.5rem;
+}
+#team .card-body h4 {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+#team .card .team-layer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 97%;
+  height: 77%;
+  top: 1%;
+  left: 1.5%;
+  background-color: var(--white-color);
+  transition: all 0.8s;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg) scale(0.5, 0.5); /* Combine both transformations */
+  opacity: 0;
+}
+#team .card:hover .team-layer {
+  transform: rotateY(360deg) scale(1, 1); /* Combine both transformations */
+  opacity: 1;
+}
+#team .card .card-hover {
+  transition: all 0.8s;
+}
+.card-img:hover .card-hover {
+  transform: scale(1.2);
+  transition: transform 0.5s;
+}
+.card-img .card-hover {
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+.card-img {
+  overflow: hidden;
+}
+#team .card ul li {
+  width: 40px;
+  height: 40px;
+  background-color: var(--dark-color);
+  border: 1px var(--dark-color) solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.5s;
+  color: var(--white-color);
+}
+#team .card ul li:hover {
+  background-color: var(--white-color);
+  color: var(--dark-color);
+}
+/*-------------------------------- End team ------------------------------------*/
+/*-------------------------------- Start contact ------------------------------------*/
+#contact .contact-item .contact-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--bg-color);
+  margin-bottom: 10px;
+  transition: all 0.5s;
+}
+#contact .contact-item:hover .contact-icon {
+  background-color: var(--contact-color);
+  color: var(--white-color);
+}
+#contact .contact-item h4 {
+  font-size: 1.1rem;
+  font-weight: 700 !important;
+}
+.form-control:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: var(--bg-color);
+  height: 50px;
+}
+.form-control {
+  background-color: var(--bg-color);
+  height: 50px;
+  border: none;
+}
+.form-control input::placeholder {
+  font-size: 0.5rem !important;
+  font-weight: 200;
+}
+textarea.form-control {
+  min-height: 150px;
+}
+#contact .submit-btn {
+  display: block;
+  padding-block: 10px;
+  padding-inline: 40px;
+  border-radius: 5px;
+  background-color: var(--main-color);
+  font-size: 13px !important;
+  color: var(--white-color);
+  border: var(--main-color) 1px solid;
+  margin-top: 20px;
+  font-family: var(--Poppins-font);
+  transition: all 0.5s;
+}
+#contact .submit-btn:hover {
+  background-color: var(--white-color);
+  color: var(--main-color);
+}
+/*-------------------------------- End contact ------------------------------------*/
+/*-------------------------------- start footer ------------------------------------*/
+footer {
+  background-color: var(--main-color);
+  text-align: center;
+  font-family: var(--Poppins-font);
+  color: var(--footer-color);
+  font-size: 0.8rem !important;
+  font-weight: 300;
+  padding-block: 15px;
+}
+footer p {
+  padding-top: 10px;
+  word-spacing: 2px;
+}
+/*-------------------------------- End footer ------------------------------------*/
+/*-------------------------------  Start Media-Queries ------------------------------- */
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+  .main-padding {
+    padding-inline: 1% !important;
+    padding-block: 5%;
+  }
+  .navbar > .container,
+  .navbar > .container-fluid,
+  .navbar > .container-lg,
+  .navbar > .container-md,
+  .navbar > .container-sm,
+  .navbar > .container-xl,
+  .navbar > .container-xxl {
+    padding-inline: 0%;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+  .container{
+    width: 80%;
+  }
+  .navbar {
+    padding: 0%;
+  }
+  .navbar-nav .nav-link.active.active::after {
+    display: none !important;
+  }
+  .main-padding {
+    padding-inline: 0% !important;
+    padding-block: 5%;
+  }
+  .navbar > .container,
+  .navbar > .container-fluid,
+  .navbar > .container-lg,
+  .navbar > .container-md,
+  .navbar > .container-sm,
+  .navbar > .container-xl,
+  .navbar > .container-xxl {
+    padding-inline: 0%;
+  }
+   nav ul li {
+    padding: 7px;
+  }
+  nav .nav-item {
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    margin: 0;
+    padding-inline: 15px;
+    border: 0%;
+  }
+  nav .nav-item a {
+    color: black !important;
+  }
+
+  #testimonials .owl-carousel .description {
+    margin-block: 10px;
+    font-size: 0.92rem !important;
+  }
+  .row > * {
+    margin-block: 10px;
+  }
+  #team .card .team-layer {
+    height: 84%;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 80%;
+  }
+  #testimonials .owl-carousel .description {
+    margin-block: 5px;
+    font-size: 0.6rem !important;
+  }
+  .row > * {
+    margin-block: 15px;
+  }
+  #team .card .team-layer {
+    height: 80%;
+  }
+  #contact .row > * {
+    margin-block: 5px;
+  }
+}
+@media (max-width: 576px) {
+  #testimonials .owl-carousel .item .item-image {
+    top: -5%;
+  }
+  #team .card .team-layer {
+    height: 73%;
+  }
+  #home h1 {
+    font-size: 1.8rem;
+  }
+  #home p {
+    font-size: 2rem;
+  }
+  #typed {
+    font-size: 2rem;
+  }
+  .typed-cursor {
+    font-size: 2rem;
+  }
+  #works .nav-tabs .nav-link{
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 330px) {
+  .container {
+    width: 80%;
+  }
+}
+/*-------------------------------  End Media-Queries ------------------------------- */
